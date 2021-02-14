@@ -1,34 +1,37 @@
 {
-  "name": "with-typescript-styled-components",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "lint-init": "eslint --init"
-  },
-  "dependencies": {
-    "http-status-codes": "^2.1.4",
-    "mysql2": "^2.2.5",
-    "next": "latest",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "sequelize": "^6.5.0",
-    "styled-components": "^5.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "12.0.12",
-    "@types/react": "16.8.23",
-    "@types/react-dom": "16.8.4",
-    "@types/styled-components": "5.0.1",
-    "@typescript-eslint/eslint-plugin": "^4.14.2",
-    "@typescript-eslint/parser": "^4.14.2",
-    "babel-plugin-styled-components": "^1.10.0",
-    "eslint": "^7.19.0",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-react": "^7.22.0",
-    "prettier": "2.2.1",
-    "typescript": "4.0"
-  },
-  "license": "MIT"
+	"name": "todo-next",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start",
+		"lint-init": "eslint --init",
+		"type-check": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@typegoose/typegoose": "^7.4.8",
+		"http-status-codes": "^2.1.4",
+		"mongoose": "^5.10.18",
+		"next": "latest",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"styled-components": "^5.0.0"
+	},
+	"devDependencies": {
+		"@babel/plugin-proposal-decorators": "^7.12.13",
+		"@types/mongoose": "^5.10.3",
+		"@types/node": "12.0.12",
+		"@types/react": "16.8.23",
+		"@types/react-dom": "16.8.4",
+		"@types/styled-components": "5.0.1",
+		"@typescript-eslint/eslint-plugin": "^4.14.2",
+		"@typescript-eslint/parser": "^4.14.2",
+		"babel-plugin-styled-components": "^1.10.0",
+		"eslint": "^7.19.0",
+		"eslint-config-prettier": "^7.2.0",
+		"eslint-plugin-react": "^7.22.0",
+		"prettier": "2.2.1",
+		"typescript": "4.0"
+	},
+	"license": "MIT"
 }

@@ -8,17 +8,22 @@ import { Todo } from '../../../src/todo/todo.model';
 export default async function todoHandler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
 	await dbConnect();
 
-	const { method } = req;
+	const { method, query } = req;
+	const id = query.id.toString();
 
 	switch (method) {
-		case 'POST': {
-			const newTodo: Todo = { description: req.body.description };
-			const savedTodo = await TodoController.save(newTodo);
-			return res.status(StatusCodes.CREATED).json(savedTodo);
-		}
 		case 'GET': {
-			const todos = await TodoController.getAll();
+			const todos = await TodoController.get(id);
 			return res.status(StatusCodes.OK).json(todos);
+		}
+		case 'PUT': {
+			const update: Partial<Todo> = { description: req.body.description };
+			const updatedTodo = await TodoController.update(id, update);
+			return res.status(StatusCodes.OK).json(updatedTodo);
+		}
+		case 'DELETE': {
+			const deleteTodo = await TodoController.delete(id);
+			return res.status(StatusCodes.OK).json(deleteTodo);
 		}
 	}
 }
