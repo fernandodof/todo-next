@@ -3,7 +3,8 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "next",
-		"build": "next build",
+		"build": "npm run install-shared && next build",
+		"install-shared": "cd ../shared && npm i",
 		"start": "next start",
 		"lint-init": "eslint --init",
 		"type-check": "tsc --noEmit"
