@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ExampleComponent } from 'shared';
 
 const Title = styled.h1`
 	color: red;
@@ -7,5 +8,10 @@ const Title = styled.h1`
 `;
 
 export default function Home(): JSX.Element {
-	return <Title>My page</Title>;
+	return (
+		<div>
+			<ExampleComponent text="This example"></ExampleComponent>
+			<Title>My page</Title>
+		</div>
+	);
 }
